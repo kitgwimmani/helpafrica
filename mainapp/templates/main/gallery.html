@@ -1,0 +1,24 @@
+{% load static %}
+{% include 'main/header.html' %}
+
+<div class="py-12 w-full flex flex-col items-center  bg-gray-800 text-gray-100 opacity-95 text-center">
+    <h1 class="font-bold text-4xl text-center p-4 pt-0">Picture Gallery</h1>
+    
+    {% for post in gallery %}
+       
+        <div class="sm:w-1/2  hover:text-green-700  sm:mt-4 ">
+          <div class="flex flex-col items-center  h-full sm:m-2 rounded overflow-hidden  bg-white h-full ">
+            <div class="text-red-500">
+              <img src="{{ post.upload.url }}" alt="">
+            </div>
+            <div class="mt-4 font-bold text-xl text-black">{{post.caption}}</div>
+            <div class="text-center mt-2 text-gray-600 text-sm p-6 pt-2">
+              {{post.body}}
+            </div>
+          </div>
+        </div>
+      
+        {% endfor %}
+    
+</div>
+{% include 'main/footer.html' %}

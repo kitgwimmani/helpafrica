@@ -1,0 +1,20 @@
+{% load static %}
+{% include 'main/header.html' %}
+
+{% if submitted %}
+Member was resgistered successfully!
+{% else %}
+<div class="py-12 w-full flex flex-col items-center  bg-green-300 text-gray-800 opacity-95">
+    <h1 class="font-bold text-4xl text-center p-4 pt-0">Register as a member</h1>
+    <form action="" method="POST"  class="max-w-xl w-full  px-8 md:px-0 " enctype='multipart/form-data'>
+        {% csrf_token %}
+        <table border="1" class="p-8">
+    {{form}}
+    </table>
+    <div class="flex flex-col md:flex-row md:-mx-2">
+        <button class="bg-green-800 text-green-100 text-sm mt-4 rounded-lg py-2 px-4 w-full md:mx-2 hover:bg-yellow-500" type="submit">Submit</button>
+      </div>
+    </form>
+</div>
+{% endif %}
+{% include 'main/footer.html' %}

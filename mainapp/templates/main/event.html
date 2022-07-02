@@ -1,0 +1,28 @@
+{% load static %}
+{% include 'main/header.html' %}
+
+<div class="py-12 w-full flex flex-col items-center  bg-gray-100 text-gray-800 opacity-95 text-center">
+    <h1 class="font-bold text-4xl text-center p-4 pt-0">Events</h1>
+    
+    <div class="flex flex-wrap flex-col   sm:flex-row ">
+    
+      {% for post in event%}
+     
+      <div class="sm:w-1/3  hover:text-green-700  sm:mt-4 ">
+        <div class="flex flex-col items-center  h-full sm:m-2 rounded overflow-hidden  bg-white h-full ">
+          <div class="text-red-500">
+            <img src="{{ post.upload.url }}" alt="">
+          </div>
+          <div class="mt-4 font-bold text-xl">{{post.caption}}</div>
+          <div class="text-center mt-2 text-gray-600 text-sm p-6 pt-2">
+            {{post.body}}
+          </div>
+        </div>
+      </div>
+    
+      {% endfor %}
+    
+    </div>
+    
+</div>
+{% include 'main/footer.html' %}
