@@ -2,6 +2,7 @@ from os import link
 from turtle import position, title
 from django.db import models
 
+
 # Create your models here.
 
 class Content (models.Model):
