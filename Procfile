@@ -1,1 +1,1 @@
-web: gunicorn mainapp.wsgi --log-file -
+web: gunicorn helpafrica.wsgi:application --log-file --log-level debug
