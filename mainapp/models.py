@@ -1,5 +1,5 @@
-from os import link
-from turtle import position, title
+#from os import link
+#from turtle import position, title
 from django.db import models
 
 
