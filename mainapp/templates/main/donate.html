@@ -18,7 +18,7 @@
         {% for post in support%}
         <span class="text-xl">{{post.title}}</span>
         <iframe class="w-full h-60" src="https://www.youtube.com/embed/{{post.link}}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-        <span class="text-sm">{{post.body}}</span>
+        <span class="text-sm">{{post.body}}</span><br>
         {% endfor %}
       </div>
     </div>
