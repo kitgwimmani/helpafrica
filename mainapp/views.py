@@ -31,7 +31,7 @@ def add_member(request):
     form = MemberForm
     return render(request, template, {'form':form, 'submitted':submitted})
 
-#@login_required(login_url='/admin')
+@login_required(login_url='/admin')
 def printid(request):
     context = {
         "member": Member.objects.all(),

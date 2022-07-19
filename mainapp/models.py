@@ -30,7 +30,7 @@ class Member(models.Model):
     fullname = models.CharField(max_length=64)
     home_address = models.TextField()
     residential_address = models.TextField()
-    dob = models.DateField()
+    date_of_birth = models.DateField()
     blood_group = models.CharField(
         choices=BLOOD_GROUP,
         max_length=3
@@ -48,8 +48,6 @@ class Member(models.Model):
         max_length=30
     )
     lga = models.CharField(max_length=40)
-    polling_unit = models.CharField(max_length=40)
-    ward = models.CharField(max_length=40)
     account_number = models.CharField(max_length=12)
     bank_name = models.CharField(
         choices=BANK,
@@ -59,7 +57,7 @@ class Member(models.Model):
     whatapp_number = models.CharField(max_length=15)
     position = models.CharField(
         choices=POSITION,
-        max_length=20
+        max_length=70
     )
     registration_number = models.CharField(max_length=15)
     signature = models.ImageField(null=True, blank=True, upload_to ='uploads/signature/')
