@@ -141,7 +141,7 @@
             </h2>
             <h5 class="text-xs text-white">Date: {{news.first.posted_at}}</h5>
             <p class="text-gray-200 text-sm sm:text-justify">
-              {{news.last.body}}
+              {{news.first.body}}
             </p>
           </div>
           
@@ -163,10 +163,10 @@
                   {{post.caption}}
                 </h2>
                 <h5 class="text-xs text-white">{{post.posted_at}}</h5>
-                <p class="text-gray-200 text-sm">
+                <p class="text-gray-200 text-sm  " style="text-overflow: ellipsis; white-space: nowrap; overflow: hidden;">
                   {{post.body}}
-                  <a href="#" class="font-bold underline">read more...</a>
                 </p>
+                <a href="#" class="font-bold underline text-white">read more...</a>
                 
               </div>
           </div>
